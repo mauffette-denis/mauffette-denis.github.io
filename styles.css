@@ -17,7 +17,7 @@ h1 {
 .travel-item {
   display: flex;
   align-items: center;
-  background: #ffffff;
+  background: #b2b5c0;
   border-radius: 8px;
   padding: 15px;
   margin-bottom: 15px;
@@ -34,7 +34,7 @@ h1 {
 
 .travel-item a {
   font-size: 1.2em;
-  color: #0066cc;
+  color: #e9980c;
   text-decoration: none;
   font-weight: bold;
 }
