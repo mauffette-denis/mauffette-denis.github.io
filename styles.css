@@ -26,7 +26,7 @@ h1 {
 
 .travel-item img {
   width: 150px;
-  height: 150px;
+  height: 100px;
   object-fit: cover;
   border-radius: 6px;
   margin-right: 20px;
