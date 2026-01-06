@@ -1,46 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Travel Websites</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="container">
-    <h1>Tous nos voyages</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tous nos blogues de voyage</title>
 
-    <div class="travel-item">
-      <img src="fig/Asie2026.jpg" alt="Asie 2026" />
-      <a href="https://asie2026.travellerspoint.com" target="_blank">Asie 2026 <br> 🇹🇼🇯🇵🇰🇷</a>
-   
-    </div>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+      }
 
-    <div class="travel-item">
-      <img src="fig/Monde2025.png" alt="Tour 2025" />
-      <a href="https://tourdumonde2025.travellerspoint.com" target="_blank">Tour du monde 2025<br>🇺🇸🇫🇯🇳🇿🇦🇺🇲🇺🇿🇦🇳🇦🇦🇴🇸🇹🇨🇮🇸🇳🇪🇸🇵🇹</a>
-    </div>
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 40px;
+      }
 
-    <div class="travel-item">
-      <img src="fig/europe2024.png" alt="Europe 2024" />
-      <a href="https://europehiver2024.travellerspoint.com" target="_blank">Europe 2024<br>🇵🇹🇫🇷🇮🇹🇱🇺🇩🇪</a>
-    </div>
+      .trip-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
 
-    <div class="travel-item">
-      <img src="fig/Monde2023.png" alt="Tour 2023" />
-      <a href="https://tourdumonde2023.travellerspoint.com" target="_blank">Tour du monde 2023<br>🇺🇸🇨🇴🇵🇦🇨🇷🇲🇽🇺🇸🇵🇫🇦🇸🇳🇿🇦🇺🇮🇩🇸🇬🇲🇾🇹🇭<br>🇱🇰🇦🇪🇴🇲🇯🇴🇪🇬🇮🇱🇹🇷🇬🇷🇮🇹🇲🇪🇲🇹🇫🇷🇪🇸🇲🇦</a>
-    </div>
+      .trip-link {
+        text-decoration: none;
+        color: inherit;
+      }
 
-    <div class="travel-item">
-      <img src="fig/sa.png" alt="Amérique Sud 2020" />
-      <a href="https://croisiere2020.travellerspoint.com" target="_blank">Amérique du Sud 2020<br>🇺🇸🇨🇴🇵🇦🇨🇷🇪🇨🇵🇪🇨🇱🇦🇷🇺🇾🇧🇷🇬🇫🇹🇹🇧🇧🇦🇬🇫🇰</a>
-    </div>
-    
-    <div class="travel-item">
-      <img src="fig/Monde2013.png" alt="En route sur" />
-      <a href="https://mauffettedenis.travellerspoint.com" target="_blank">Tour du Monde 2013-2014<br>🇬🇧🇩🇰🇩🇪🇫🇮🇷🇺🇪🇪🇳🇱🇹🇷🇮🇹🇭🇷🇬🇷🇯🇴🇦🇪🇹🇿<br>🇹🇭🇳🇵🇰🇭🇲🇲🇯🇵🇳🇿🇦🇺🇵🇫🇨🇱🇵🇪🇲🇽🇭🇳🇧🇿🇰🇾</a>
-    </div>
+      .trip-box {
+        width: 300px;
+        height: 420px; /* SAME SIZE FOR ALL BOXES */
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s;
 
-  </div>
-</body>
+        /* LAYOUT & SPACING */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px;
+        box-sizing: border-box;
+      }
+
+      .trip-box:hover {
+        transform: translateY(-5px);
+      }
+
+      .trip-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 10px auto;
+        border: 3px solid #ddd;
+      }
+
+      .trip-title {
+        font-size: 24px;
+        color: #333;
+        margin: 10px 0;
+      }
+
+      .trip-subtitle {
+        font-size: 18px;
+        color: #666;
+        padding: 0 10px;
+        line-height: 1.4;
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Tous nos blogues de voyage</h1>
+
+    <div class="trip-container">
+      <!-- Asie 2026 -->
+      <a href="trips/asie-2026.html" class="trip-link">
+        <div class="trip-box">
+          <img src="images/asie-2026.png" alt="Asie 2026 Map" class="trip-image" />
+          <div class="trip-title">Asie 2026</div>
+          <div class="trip-subtitle">🇯🇵 🇹🇼 🇰🇷</div>
+        </div>
+      </a>
+
+      <!-- Tour du monde 2025 -->
+      <a href="trips/tour-du-monde-2025.html" class="trip-link">
+        <div class="trip-box">
+          <img src="images/tour-du-monde-2025.png" alt="Tour du monde 2025 Map" class="trip-image" />
+          <div class="trip-title">Tour du monde 2025</div>
+          <div class="trip-subtitle">
+            🇺🇸🇫🇯🇳🇿🇦🇺🇲🇺🇿🇦🇳🇦🇦🇴🇸🇹🇨🇮🇸🇳🇪🇸🇵🇹
+          </div>
+        </div>
+      </a>
+
+      <!-- Europe 2024 -->
+      <a href="trips/europe-2024.html" class="trip-link">
+        <div class="trip-box">
+          <img src="images/europe2024.png" alt="Europe 2024 Map" class="trip-image" />
+          <div class="trip-title">Europe 2024</div>
+          <div class="trip-subtitle">🇵🇹🇫🇷🇮🇹🇱🇺🇩🇪</div>
+        </div>
+      </a>
+
+      <!-- Tour du monde 2023 -->
+      <a href="trips/tour-du-monde-2023.html" class="trip-link">
+        <div class="trip-box">
+          <img src="images/tour-du-monde-2023.png" alt="Tour du monde 2023 Map" class="trip-image" />
+          <div class="trip-title">Tour du monde 2023</div>
+          <div class="trip-subtitle">
+            🇺🇸🇨🇴🇵🇦🇨🇷🇲🇽🇺🇸🇵🇫🇦🇸🇳🇿🇦🇺🇮🇩🇸🇬🇲🇾🇹🇭🇱🇰🇦🇪🇴🇲🇯🇴🇪🇬🇮🇱🇹🇷🇬🇷🇮🇹🇲🇪🇲🇹🇫🇷🇪🇸🇲🇦
+          </div>
+        </div>
+      </a>
+
+      <!-- Amérique du Sud 2020 -->
+      <a href="trips/amerique-du-sud-2020.html" class="trip-link">
+        <div class="trip-box">
+          <img src="images/amerique-du-sud-2020.png" alt="Amérique du Sud 2020 Map" class="trip-image" />
+          <div class="trip-title">Amérique du Sud 2020</div>
+          <div class="trip-subtitle">
+            🇺🇸🇨🇴🇵🇦🇨🇷🇪🇨🇵🇪🇨🇱🇦🇷🇺🇾🇧🇷🇬🇫🇹🇹🇧🇧🇦🇬🇫🇰
+          </div>
+        </div>
+      </a>
+
+      <!-- Tour du monde 2013-2014 -->
+      <a href="trips/tour-du-monde-2013-2014.html" class="trip-link">
+        <div class="trip-box">
+          <img src="images/tour-du-monde-2013-2014.png" alt="Tour du monde 2013-2014 Map" class="trip-image" />
+          <div class="trip-title">Tour du monde 2013-2014</div>
+          <div class="trip-subtitle">
+            🇬🇧🇩🇰🇩🇪🇫🇮🇷🇺🇪🇪🇳🇱🇹🇷🇮🇹🇭🇷🇬🇷🇯🇴🇦🇪🇹🇿🇹🇭🇳🇵🇰🇭🇲🇲🇯🇵🇳🇿🇦🇺🇵🇫🇨🇱🇵🇪🇲🇽🇭🇳🇧🇿🇰🇾
+          </div>
+        </div>
+      </a>
+    </div>
+  </body>
 </html>
